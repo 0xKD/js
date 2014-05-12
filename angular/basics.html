@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<title>Angular</title>
+	</head>
+	<body>
+		<!-- controller to div -->
+		<div ng-controller="MyController">
+			<h1>Hello World!</h1>
+			<!-- things in {{ }} are evaluated -->
+			{{ "hi" }}
+			{{ 3 + 2}}
+			<!-- from the scope -->
+			{{ val }}
+			{{ add() }}
+		</div>
+		<script src="js/angular.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
