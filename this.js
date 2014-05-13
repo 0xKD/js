@@ -2,7 +2,7 @@
 
 var myFunction = function(){
 	// console.log(this);
-}
+};
 
 var foo = new myFunction(); // empty object
 myFunction(); // global object
@@ -37,7 +37,7 @@ function Presenter(name) {
 	this.name = name;
 	this.speak = function(line) {
 		console.log(this.name,"says: '" + line +"'.");
-	}
+	};
 }
 
 var stig = new Presenter('Stig');
@@ -173,7 +173,7 @@ var counter = {
 	inc: function() {
 		this.count += 1;
 	}
-}
+};
 
 // will not work, counter.inc invoked as function, not method with object ref
 callIt(counter.inc); // count will become a global variable with value NaN

@@ -104,7 +104,7 @@ console.log(Presenter.prototype.teeth);
 // overriding inherited function
 Presenter.prototype.toString = function(){
 	return ("{" + this.name + "}");
-}
+};
 console.log(stig.toString());
 
 // toString is now overridden, 
@@ -119,7 +119,7 @@ function Presenter2(name) {
 
 Presenter2.prototype.speak = function(line) {
 	console.log(this.name, "says: {", line, "}");
-}
+};
 
 var may2 = new Presenter2("James May");
 may2.speak("Clarkson!");

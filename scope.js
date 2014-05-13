@@ -72,7 +72,7 @@ var user = {
 	sayName: function(){
 		console.log(this.handle);
 	}
-}
+};
 user.sayName();
 
 // 2. Call a function and pass this with .call()
