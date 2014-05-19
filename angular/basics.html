@@ -1,20 +1,25 @@
 <!doctype html>
-<html ng-app="app">
+<!-- add directive to html specifying base (root) module for the application
+value of attribute is name of the module -->
+<html data-ng-app="app">
 	<head>
 		<title>Angular</title>
+		<script src="js/angular.js"></script>
 	</head>
 	<body>
-		<!-- controller to div -->
-		<div ng-controller="MyController">
+		<!-- applying controller to the div element using ng-controller 
+		directive the div and all its children will be able to 
+		access the $scope object -->
+		<div data-ng-controller="MyController">
 			<h1>Hello World!</h1>
-			<!-- things in {{ }} are evaluated -->
+			<!-- things in {{ }} are evaluated / considered as expressions
+			by angular -->
 			{{ "hi" }}
 			{{ 3 + 2}}
-			<!-- from the scope -->
+			<!-- from $scope -->
 			{{ val }}
 			{{ add() }}
 		</div>
-		<script src="js/angular.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
