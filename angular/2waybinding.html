@@ -1,0 +1,20 @@
+<!doctype html>
+<html data-ng-app="app">
+	<head>
+		<script src="js/angular.js"></script>
+	</head>
+	<body>
+		<div data-ng-controller="index">
+			<!-- ng-model allows binding values to HTML elements such as input 
+			fields. Changes in the scope are reflected in the view and changes
+			in the view are reflected back into the scope
+
+			Attribute value is almost always name of $scope field to which we
+			need to bind the element to -->
+			<input type="text" data-ng-model="helloWorld">
+			<h1>You entered: {{helloWorld}}</h1>
+		</div>
+		<script src="js/app2.js"></script>
+	</body>
+	
+</html>
