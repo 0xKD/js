@@ -1,0 +1,11 @@
+* {
+	/* from medium.com */
+	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode", 
+		"Lucida Sans", Geneva,Verdana,sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+	margin-top: 5em;
+	width: 20em;
+}
