@@ -15,12 +15,12 @@
             processing.background(205, 225, 255);
             this.x += this.dx;
             this.y += this.dy;
-            if ((this.x + this.radius / 2) > processing.width 
-                || (this.x - this.radius / 2) < 0) {
+            if ((this.x + this.radius / 2) > processing.width ||
+                (this.x - this.radius / 2) < 0) {
                 this.dx *= -1;
             }
-            if ((this.y + this.radius / 2) > processing.height 
-                || (this.y - this.radius / 2) < 0) {
+            if ((this.y + this.radius / 2) > processing.height ||
+                (this.y - this.radius / 2) < 0) {
                 this.dy *= -1;
             }
             processing.noStroke();

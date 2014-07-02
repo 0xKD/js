@@ -29,5 +29,5 @@ app.controller('MyController', ['$scope', function($scope) {
 	$scope.val = "King's Landing";
 	$scope.add = function() {
 		return 3 + 3;
-	}
+	};
 }]);

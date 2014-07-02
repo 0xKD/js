@@ -31,7 +31,7 @@ console.log('Ln(3):', Math.log(3));
 
 // returns max / min
 console.log(Math.max(3, 4, 9.9, 45, 71));
-console.log(Math.min(.3, 4, 9.9, 45, 71));
+console.log(Math.min(0.3, 4, 9.9, 45, 71));
 
 console.log('3^6:', Math.pow(3, 6));
 

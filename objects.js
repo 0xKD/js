@@ -1,6 +1,8 @@
 // objects
 
-var myObject = new Object;
+var myObject = new Object();
+// jsHint: var myObject = {} // preferable
+
 myObject.first = 'Ned';
 myObject.last = 'Stark';
 
@@ -27,7 +29,7 @@ var obj = {
 	sayName: function() {
 		return this.firstName + ' ' + this.lastName;
 	}
-}
+};
 
 // named data properties: mapping from string keys to values
 console.log(obj['firstName'], obj.lastName);

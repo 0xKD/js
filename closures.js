@@ -16,7 +16,7 @@ function foo2(x){
 	var tmp = 3;
 	return function(y){
 		console.log(x + y + (++tmp));
-	}
+	};
 }
 
 console.log("Closure 2:");
@@ -45,7 +45,7 @@ function sayHello(name){
 	var text = 'Hello ' + name;
 	return function() {
 		console.log(text);
-	}
+	};
 }
 
 // In JavaScript, if you declare a function within another function, 
@@ -58,7 +58,7 @@ say();
 
 function say667(){
 	var num = 666;
-	function b() { console.log(num) }
+	function b() { console.log(num); }
 	num++;
 	return b;
 }

@@ -3,7 +3,7 @@ var fs = require('fs');
 var config = {
 	host: '127.0.0.1',
 	port: '8282'
-}
+};
 
 var characters = {
 	'1': {
@@ -14,7 +14,7 @@ var characters = {
 		name: 'Ned Stark',
 		house: 'Beheaded'
 	}
-}
+};
 // create server
 var express = require('express');
 var app = express();

@@ -23,7 +23,7 @@ function test() {
 	x();
 	var z = function() {
 		console.log('Won\'t run');
-	} // function assignment won't be hoisted
+	}; // function assignment won't be hoisted
 	function x() {
 		console.log('This will run!');
 	} // function declaration will be

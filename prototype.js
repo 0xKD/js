@@ -29,7 +29,7 @@ function Presenter(name) {
 	this.name = name;
 	this.speak = function(line) {
 		console.log(this.name,"says: '" + line +"'.");
-	}
+	};
 }
 
 var stig = new Presenter('Stig');
@@ -44,7 +44,7 @@ function makePresenter(name) {
 		speak: function(line) {
 			console.log(this.name,"says: '" + line +"'.");
 		}
-	}
+	};
 }
 
 var stigsCousin = makePresenter('Stig\'s fat (american) cousin');

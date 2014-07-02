@@ -26,7 +26,7 @@ console.log(p1 == p2);
 
 Person.prototype.getFullName = function() {
 	return this.first + ' ' + this.last;
-}
+};
 
 console.log(p1.getFullName());
 
@@ -39,7 +39,7 @@ console.log(p1.prototype); // undefined
 
 p1.getFullName = function() {
 	return this.first + ' : ' + this.last;
-}
+};
 
 console.log(p1.getFullName()); // John : Doe
 console.log(p2.getFullName()); // Jane Doe , unaffected by p1's override
@@ -109,7 +109,7 @@ var fn = function(x) {
 	else {
 		fn(1); // here too, so I don't know how the article differentiates them
 	}
-}
+};
 
 fn(2);
 
@@ -122,7 +122,7 @@ var fn2 = function priv(x) {
 	else {
 		priv(1); // priv accessible only inside the function,
 	}
-}
+};
 
 fn2(3); // priv not accessible here
 

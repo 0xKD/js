@@ -18,7 +18,7 @@ var tokens = JSON.parse(token_file);
 var listener = {
 	host: '127.0.0.1',
 	port: '9090'
-}
+};
 
 var api_main = {
 	host: 'getpocket.com',
@@ -28,7 +28,7 @@ var api_main = {
 		'Content-Type': 'application/json; charset=UTF-8',
 		'X-Accept': 'application/json'
 	}
-}
+};
 var api = {
 	
 	add: {
@@ -49,7 +49,7 @@ var api = {
 		path: '/v3/oauth/authorize',
 		method: 'POST'	
 	}
-}
+};
 
 function Item(url) {
 	this.url = url;
@@ -86,7 +86,7 @@ function authenticate(up_callback) {
 			consumer_key: tokens.consumer_key,
 			code: ''
 		}
-	}
+	};
 
 	// obtain request token
 	function getRequestToken(callback) {

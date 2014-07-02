@@ -52,7 +52,7 @@ function makePresenter(name) {
 		speak: function(line) {
 			console.log(this.name,"says: '" + line +"'.");
 		}
-	}
+	};
 }
 
 var stigsCousin = makePresenter('Stig\'s fat (american) cousin');
@@ -127,7 +127,7 @@ var obj = {
 	method: function() {
 		console.log(this === obj);
 	}
-}
+};
 
 obj.method(); // here the object is obj, so "true"
 obj.method.call('A'); // false
@@ -199,7 +199,7 @@ var obj = {
 			}
 		);
 	}
-}
+};
 obj.loop();
 
 // fix:
@@ -228,10 +228,9 @@ var anotherObj = {
 		this.friends.forEach(
 			function(friend) {
 				console.log(this.name + ' knows ' + friend);
-			}
-		, this);
+			}, this);
 	}
-}
+};
 
 // same output with all
 anotherObj.loop();
