@@ -79,11 +79,12 @@
       this.setState({data: newComments});
     },
     render: function() {
+      // You need to self-close tags 
+      // (even if you don't need to do the same in HTML, eg; <br> <img>)
+      // JS comments not allowed within JSX tags
       return (
         <div className="commentBox">
           <h2>Comments</h2>
-          // You need to self-close tags 
-          // (even if you don't need to do the same in HTML, eg; <br> <img>)
           <hr/>
           <CommentList data={this.state.data}/>
           <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
