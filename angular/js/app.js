@@ -3,13 +3,13 @@
 angular.module('app', []);
 
 var MyController = function($scope) {
-	// values
-	$scope.val = "King's Landing";
+  // values
+  $scope.val = "King's Landing";
 
-	// functions
-	$scope.add = function() {
-		return 3 + 3;
-	}
+  // functions
+  $scope.add = function() {
+    return 3 + 3;
+  }
 }
 */
 
@@ -25,9 +25,9 @@ var app = angular.module('app', []);
 //  dependencies to the controller function passed to it as arguments,
 //  order of dependencies must match order of arguments to function.
 app.controller('MyController', ['$scope', function($scope) {
-	// add variables / functions to $scope
-	$scope.val = "King's Landing";
-	$scope.add = function() {
-		return 3 + 3;
-	};
+  // add variables / functions to $scope
+  $scope.val = "King's Landing";
+  $scope.add = function() {
+    return 3 + 3;
+  };
 }]);
