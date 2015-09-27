@@ -1,6 +1,5 @@
 js
 ==
 
-JavaScript notes
+JavaScript, React, Angular, Processing notes
 
-May not be 100% accurate
