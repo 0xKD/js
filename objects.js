@@ -1,5 +1,6 @@
 // objects
 
+/*jshint -W010 */
 var myObject = new Object();
 // jsHint: var myObject = {} // preferable
 
@@ -7,8 +8,8 @@ myObject.first = 'Ned';
 myObject.last = 'Stark';
 
 var myObject2 = {
-	first: 'Ned',
-	last: 'Stark'
+  first: 'Ned',
+  last: 'Stark'
 };
 
 // two objects are strictly equal if they refer to the same object
@@ -24,28 +25,30 @@ console.log(myObject === myObject2);
 // i) Properties:
 
 var obj = {
-	firstName: 'Jon',
-	lastName: 'Snow',
-	sayName: function() {
-		return this.firstName + ' ' + this.lastName;
-	}
+  firstName: 'Jon',
+  lastName: 'Snow',
+  sayName: function() {
+    return this.firstName + ' ' + this.lastName;
+  }
 };
 
 // named data properties: mapping from string keys to values
+/*jshint -W069 */
 console.log(obj['firstName'], obj.lastName);
 
 // named data properties also include methods
+/*jshint -W069 */
 console.log(obj['sayName']());
 
 // ii) Accessors / virtual properties. Setter / getter for property
 
 var obj2 = {
-	get foo() {
-		return 'getter';
-	},
-	set foo(value) {
-		console.log('setter: ' + value);
-	}
+  get foo() {
+    return 'getter';
+  },
+  set foo(value) {
+    console.log('setter: ' + value);
+  }
 };
 
 obj2.foo = 'hi';
@@ -56,10 +59,10 @@ console.log(obj2.foo);
 
 // arry has two properties: name & describe. describe is a method
 var arry = {
-	name: 'Arya',
-	describe: function() {
-		return 'I\'m not a girl!';
-	}
+  name: 'Arya',
+  describe: function() {
+    return 'I\'m not a girl!';
+  }
 };
 
 // can use inheritance between objects, can protect them from being changed,
@@ -70,6 +73,7 @@ var arry = {
 console.log(arry.name); // 'Arya'
 
 // bracket operator allows you to compute key of property via expression
+/*jshint -W069 */
 console.log(arry['desc' + 'ribe']); // '[Function]'
 
 // bracket operator allows accessing keys that are not identifiers
@@ -80,6 +84,7 @@ console.log(o['not an identifier']); // 430
 console.log(o[3+3]); // 6
 
 // getting property that doesn't exist returns undefined
+/*jshint -W069 */
 console.log(o['hello']);
 
 // setting a nonexistent property will create it

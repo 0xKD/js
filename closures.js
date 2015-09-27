@@ -1,22 +1,22 @@
 // inner function has access to variables in the outside function
 
 function foo(x) {
-	var tmp = 3;
-	// "Simply accessing variables outside of your immediate lexical scope creates a closure."
-	function bar(y) {
-		console.log(x + y + (++tmp));
-	}
-	bar(10);
+  var tmp = 3;
+  // "Simply accessing variables outside of your immediate lexical scope creates a closure."
+  function bar(y) {
+    console.log(x + y + (++tmp));
+  }
+  bar(10);
 }
 
 console.log("Closure 1:");
 foo(2);
 
 function foo2(x){
-	var tmp = 3;
-	return function(y){
-		console.log(x + y + (++tmp));
-	};
+  var tmp = 3;
+  return function(y){
+    console.log(x + y + (++tmp));
+  };
 }
 
 console.log("Closure 2:");
@@ -42,10 +42,10 @@ bar(10);
 
 
 function sayHello(name){
-	var text = 'Hello ' + name;
-	return function() {
-		console.log(text);
-	};
+  var text = 'Hello ' + name;
+  return function() {
+    console.log(text);
+  };
 }
 
 // In JavaScript, if you declare a function within another function, 
@@ -57,10 +57,10 @@ say = sayHello('Bob');
 say();
 
 function say667(){
-	var num = 666;
-	function b() { console.log(num); }
-	num++;
-	return b;
+  var num = 666;
+  function b() { console.log(num); }
+  num++;
+  return b;
 }
 
 // local variables are not copied — they are kept by reference (num)

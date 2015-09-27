@@ -1,11 +1,11 @@
 // prototype...
 
 var myClass = function(){
-	// console.log('hi');
-	console.log(this);
+  // console.log('hi');
+  console.log(this);
 
-	this.first = 'Jon';
-	this.last = 'Snow'; 
+  this.first = 'Jon';
+  this.last = 'Snow'; 
 };
 
 // new myClass() returns empty object
@@ -14,8 +14,8 @@ var foo = new myClass();
 console.log(foo);
 
 myClass.prototype.setName = function(_first, _last) {
-	this.first = _first;
-	this.last = _last;
+  this.first = _first;
+  this.last = _last;
 };
 
 foo.setName('Catelyn', 'Stark');
@@ -26,10 +26,10 @@ console.log(foo);
 //  Functions used to create new objects like this are called constructors
 
 function Presenter(name) {
-	this.name = name;
-	this.speak = function(line) {
-		console.log(this.name,"says: '" + line +"'.");
-	};
+  this.name = name;
+  this.speak = function(line) {
+    console.log(this.name,"says: '" + line +"'.");
+  };
 }
 
 var stig = new Presenter('Stig');
@@ -39,12 +39,12 @@ stig.speak('...');
 // Alternative?
 
 function makePresenter(name) {
-	return {
-		name: name,
-		speak: function(line) {
-			console.log(this.name,"says: '" + line +"'.");
-		}
-	};
+  return {
+    name: name,
+    speak: function(line) {
+      console.log(this.name,"says: '" + line +"'.");
+    }
+  };
 }
 
 var stigsCousin = makePresenter('Stig\'s fat (american) cousin');
@@ -77,7 +77,7 @@ console.log(Presenter.prototype.constructor);
 //  whose constructor property points back to the function
 
 function Foo(x){
-	this.x = x;
+  this.x = x;
 }
 console.log(Foo.prototype.constructor);
 
@@ -103,7 +103,7 @@ console.log(Presenter.prototype.teeth);
 
 // overriding inherited function
 Presenter.prototype.toString = function(){
-	return ("{" + this.name + "}");
+  return ("{" + this.name + "}");
 };
 console.log(stig.toString());
 
@@ -114,11 +114,11 @@ console.log(stig.toString == Object.prototype.toString);
 // Alternate approach to Presenter constructor
 
 function Presenter2(name) {
-	this.name = name;
+  this.name = name;
 }
 
 Presenter2.prototype.speak = function(line) {
-	console.log(this.name, "says: {", line, "}");
+  console.log(this.name, "says: {", line, "}");
 };
 
 var may2 = new Presenter2("James May");

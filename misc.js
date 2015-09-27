@@ -2,8 +2,8 @@
 
 // every function is an object
 function Person(first, last) {
-	this.first = first;
-	this.last = last;
+  this.first = first;
+  this.last = last;
 }
 
 var p1 = new Person('John', 'Doe');
@@ -25,7 +25,7 @@ console.log(p1 == p2);
 // function's prototype can be extended to define custom methods and properties
 
 Person.prototype.getFullName = function() {
-	return this.first + ' ' + this.last;
+  return this.first + ' ' + this.last;
 };
 
 console.log(p1.getFullName());
@@ -38,7 +38,7 @@ console.log(p1.prototype); // undefined
 // override property of an instance
 
 p1.getFullName = function() {
-	return this.first + ' : ' + this.last;
+  return this.first + ' : ' + this.last;
 };
 
 console.log(p1.getFullName()); // John : Doe
@@ -76,6 +76,7 @@ console.log(x === "1"); // false
 
 console.log(undefined === undefined); // true
 console.log(null === null); //  true
+/*jshint -W019 */
 console.log(NaN !== NaN); // true
 
 // to check if value is NaN, use global function isNaN()
@@ -92,23 +93,23 @@ console.log(isNaN('true'));  // incorrectly returns true
 
 // function declaration
 function hello(x) {
-	if (x === 1) {
-		console.log('Hi!');
-	}
-	else {
-		hello(1); // function accessible inside itself
-	}
+  if (x === 1) {
+    console.log('Hi!');
+  }
+  else {
+    hello(1); // function accessible inside itself
+  }
 }
 
 hello(2);
 
 var fn = function(x) {
-	if (x === 1) {
-		console.log('Hello!');
-	}
-	else {
-		fn(1); // here too, so I don't know how the article differentiates them
-	}
+  if (x === 1) {
+    console.log('Hello!');
+  }
+  else {
+    fn(1); // here too, so I don't know how the article differentiates them
+  }
 };
 
 fn(2);
@@ -116,12 +117,12 @@ fn(2);
 // another way
 
 var fn2 = function priv(x) {
-	if (x === 1) {
-		console.log('Yo!');
-	}
-	else {
-		priv(1); // priv accessible only inside the function,
-	}
+  if (x === 1) {
+    console.log('Yo!');
+  }
+  else {
+    priv(1); // priv accessible only inside the function,
+  }
 };
 
 fn2(3); // priv not accessible here
