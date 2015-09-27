@@ -10,14 +10,14 @@ console.log('[+] Hello: ' + jsonFile.hello);
 // async write: eg. writing to log file
 
 fs.appendFile('./files/write.txt', '[+] More stuff...', 
-	function(error) {
-		console.log('[+] Written to file (async)');
-	}
+  function(error) {
+    console.log('[+] Written to file (async)');
+  }
 );
 
 // [fs.writeFile] write will OVERWRITE!
 
 var pocket_json = JSON.parse(fs.readFileSync('./private/pocket/tokens.json'));
 _.each(pocket_json, function(value, key) {
-	console.log(key,':',value);
+  console.log(key,':',value);
 });

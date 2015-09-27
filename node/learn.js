@@ -4,7 +4,7 @@ console.log('[+] Starting..');
 
 // non blocking
 fs.readFile('./files/sample.txt', function(error, data) {
-	console.log('[+] Contents of file: ' + data);
+  console.log('[+] Contents of file: ' + data);
 });
 
 console.log('[+] Continue execution');
@@ -21,11 +21,11 @@ console.log('[!] Done?');
 
 // we are not considering unicode, so naive reverse will do for now
 fs.writeFileSync('./files/write.txt', 
-	content.toString().split(" ").reverse().join(" "));
+  content.toString().split(" ").reverse().join(" "));
 
 /* 3. Watching a file */
 fs.watchFile('./files/testfile.json', function(current, previous) {
-	console.log('Changed');
+  console.log('Changed');
 });
 
 /* 4. Using module from file */

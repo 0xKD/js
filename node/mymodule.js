@@ -2,14 +2,14 @@
 var _ = require('underscore');
 
 function reverseString(str) {
-	return str.split("").reverse().join("");
+  return str.split("").reverse().join("");
 }
 
 function capitalize(str) {
-	// why not
-	return _.map(str.split(''), function(character) {
-		return character.toUpperCase();
-	}).join('');
+  // why not
+  return _.map(str.split(''), function(character) {
+    return character.toUpperCase();
+  }).join('');
 }
 
 // console.log(palindrome('racecar'));
