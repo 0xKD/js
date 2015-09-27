@@ -1,4 +1,5 @@
 # pocket token file
 tokens.json
+*.sw[ap]
 
 node_modules/
