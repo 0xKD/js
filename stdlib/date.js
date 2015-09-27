@@ -22,7 +22,7 @@ console.log('Date.now():', Date.now());
 
 // parses string representation of date, and returns ms since epoch, local time
 console.log('Date.parse(16:04:32 12-12-2014)', 
-	Date.parse('16:04:32 12-12-2014'));
+  Date.parse('16:04:32 12-12-2014'));
 
 // takes params as longest form of constructor and returns ms since epoch, UTC
 console.log('Date.UTC()', Date.UTC(2014, 05, 1, 14, 33, 30, 30));
@@ -40,7 +40,7 @@ console.log(now.getHours());
 
 console.log(now.toJSON());
 
-console.log(now.toUTCString());	// date to string UTC timezone
+console.log(now.toUTCString()); // date to string UTC timezone
 
 // getting time difference
 var ds1 = new Date();
