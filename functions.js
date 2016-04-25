@@ -43,3 +43,12 @@ for(var i = 0; i < colours.length; i++) {
   })(i), 100);
   // console.log('settimeout called');
 }
+
+// special, array-like variable arguments- holds all arguments passed 
+//  to a function
+
+var argsfunc = function(){
+	console.log(arguments);
+}
+
+argsfunc('a','b');
