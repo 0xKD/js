@@ -27,6 +27,12 @@ console.log(foo);
 
 function Presenter(name) {
   this.name = name;
+  /*
+   * Every Presenter instance will get its own copy of the speak method.
+   * This is very different from the alternate method shown below.
+   * One must prefer using the alternate method when a large number
+   * of instances of the object may be created.
+   */
   this.speak = function(line) {
     console.log(this.name,"says: '" + line +"'.");
   };
@@ -117,6 +123,10 @@ function Presenter2(name) {
   this.name = name;
 }
 
+/*
+ * The speak method is shared across all instances of Presenter.
+ * There is a single copy of the function.
+ */
 Presenter2.prototype.speak = function(line) {
   console.log(this.name, "says: {", line, "}");
 };
