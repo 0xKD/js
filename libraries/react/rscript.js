@@ -33,13 +33,13 @@
   var CommentForm = React.createClass({
     handleSubmit: function(e) {
       e.preventDefault();
-      var author = React.findDOMNode(this.refs.author).value.trim();
-      var comment = React.findDOMNode(this.refs.comment).value.trim();
+      var author = ReactDOM.findDOMNode(this.refs.author).value.trim();
+      var comment = ReactDOM.findDOMNode(this.refs.comment).value.trim();
       if (!author || !comment) { return; }
       // Call callback specified by parent component
       this.props.onCommentSubmit({author: author, text: comment});
-      React.findDOMNode(this.refs.author).value = '';
-      React.findDOMNode(this.refs.comment).value = '';
+      ReactDOM.findDOMNode(this.refs.author).value = '';
+      ReactDOM.findDOMNode(this.refs.comment).value = '';
       return;
     },
     render: function() {
@@ -98,7 +98,7 @@
     {author: "Jordan Walke", text: "This is *another* comment"}
   ];
   // Fatal fail if ID specified below is not found
-  React.render(
+  ReactDOM.render(
     <CommentBox data={data}/>,
     document.getElementById('comments')
   );
