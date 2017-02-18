@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <style>
+      .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+        opacity: 0
+      }
+    </style>
+    <title>VueJS - Test</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div id="app">
+        <pre class="text-muted small">#app</pre>
+        {{ message }}
+      </div>
+      <hr>
+      <div id="app-2">
+        <pre class="text-muted small">#app-2</pre>
+        <!--
+          v-bind is a directive, special vue attribute. bind means keep attribute
+          value up to date with value on instance.
+
+          Can't do this:
+            <p title={{message}}></p>
+        -->
+        <p class="lead" v-bind:title="hoverText" v-bind:style="style">
+          {{ message }}
+        </p>
+        <button class="btn btn-sm btn-outline-primary" v-on:click="changeColor">Change Color</button>
+        <!-- 
+          transition component will add, remove a bunch of classes
+          In this case: fade-enter-active, fade-leave-active, fade-enter, fade-leave-to
+          See CSS classes in <head>
+         -->
+        <transition name="fade">
+          <span class="small text-muted" v-if="unchanged">
+            Click the button to change color of the text.
+          </p>
+        </transition>
+      </div>
+      <hr>
+      <div id="app-3">
+        <pre class="text-muted small">#app-3</pre>
+        <div class="btn-group" role="group">
+          <!-- iterating over some values -->
+          <button type="button" class="btn btn-secondary" v-for="item in items">
+            {{item}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
