@@ -18,12 +18,22 @@
   <body>
     <div class="container mt-5">
       <div id="app">
-        <pre class="text-muted small">#app</pre>
+        <p class="small text-muted inline">
+          <mark>#app</mark>
+          <span class="font-italic">
+            (data-binding, rendering data)
+          </span>
+        </p>
         {{ message }}
       </div>
       <hr>
       <div id="app-2">
-        <pre class="text-muted small">#app-2</pre>
+        <p class="small text-muted inline">
+          <mark>#app-2</mark>
+          <span class="font-italic">
+            (event handling, conditionals, transitions)
+          </span>
+        </p>
         <!--
           v-bind is a directive, special vue attribute. bind means keep attribute
           value up to date with value on instance.
@@ -48,13 +58,26 @@
       </div>
       <hr>
       <div id="app-3">
-        <pre class="text-muted small">#app-3</pre>
+        <!-- see what I did here? -->
+        <descr v-bind:things="things"></descr>
+        <div class="form-group form-inline">
+          <!-- input1 must be defined in the data object, even if the value is null -->
+          <input v-model="input1" type="text" class="form-control inline"
+                 placeholder="type here…">&nbsp;
+          <input type="text" readonly class="form-control" v-bind:value="input1">
+        </div>
         <div class="btn-group" role="group">
           <!-- iterating over some values -->
           <button type="button" class="btn btn-secondary" v-for="item in items">
             {{item}}
           </button>
         </div>
+      </div>
+      <hr/>
+      <div id="app-4">
+        <!-- defining values inline -->
+        <descr v-bind:things="['custom components', 'interpolation']"></descr>
+        <my-list v-bind:items="fruits"></my-list>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
